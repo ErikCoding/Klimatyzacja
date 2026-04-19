@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ArcticFlow - Profesjonalne systemy klimatyzacji. Chłód, który czujesz. Komfort, który zostaje.">
+    <title>ArcticFlow | Klimatyzacja Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cursor follower -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+    
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <svg viewBox="0 0 100 100" class="snowflake-loader">
+                    <path d="M50 5 L50 95 M5 50 L95 50 M20 20 L80 80 M80 20 L20 80" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <circle cx="50" cy="50" r="8" fill="currentColor"/>
+                </svg>
+            </div>
+            <p class="preloader-text">Ładowanie świeżości...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="#" class="logo">
+                <svg viewBox="0 0 40 40" class="logo-icon">
+                    <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <path d="M20 8 L20 32 M8 20 L32 20 M12 12 L28 28 M28 12 L12 28" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <circle cx="20" cy="20" r="4" fill="currentColor"/>
+                </svg>
+                <span>ArcticFlow</span>
+            </a>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Start</a></li>
+                <li><a href="#services" class="nav-link">Usługi</a></li>
+                <li><a href="#about" class="nav-link">O nas</a></li>
+                <li><a href="#process" class="nav-link">Proces</a></li>
+                <li><a href="#testimonials" class="nav-link">Opinie</a></li>
+                <li><a href="#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+            
+            <a href="#contact" class="nav-cta">
+                <span>Darmowa wycena</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+            
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="floating-elements">
+                <div class="float-element" data-speed="0.5"></div>
+                <div class="float-element" data-speed="0.3"></div>
+                <div class="float-element" data-speed="0.7"></div>
+                <div class="float-element" data-speed="0.4"></div>
+                <div class="float-element" data-speed="0.6"></div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge" data-animate="fade-up">
+                <span class="badge-dot"></span>
+                <span>Lider klimatyzacji w Polsce</span>
+            </div>
+            
+            <h1 class="hero-title" data-animate="fade-up" data-delay="100">
+                <span class="title-line">Chłód, który</span>
+                <span class="title-line accent">czujesz</span>
+                <span class="title-line">Komfort, który</span>
+                <span class="title-line accent">zostaje</span>
+            </h1>
+            
+            <p class="hero-description" data-animate="fade-up" data-delay="200">
+                Projektujemy i instalujemy systemy klimatyzacji, które tworzą idealne środowisko 
+                dla Twojego domu i biznesu. Nowoczesne rozwiązania, które oszczędzają energię.
+            </p>
+            
+            <div class="hero-actions" data-animate="fade-up" data-delay="300">
+                <a href="#contact" class="btn btn-primary">
+                    <span>Zamów wizytę</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#services" class="btn btn-secondary">
+                    <span>Zobacz usługi</span>
+                </a>
+            </div>
+            
+            <div class="hero-stats" data-animate="fade-up" data-delay="400">
+                <div class="stat">
+                    <span class="stat-number" data-count="2500">0</span>
+                    <span class="stat-label">Zadowolonych klientów</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="15">0</span>
+                    <span class="stat-label">Lat doświadczenia</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="98">0</span>
+                    <span class="stat-label">% Pozytywnych opinii</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="ac-unit-wrapper" data-animate="scale-in">
+                <div class="ac-unit">
+                    <div class="ac-body">
+                        <div class="ac-vents">
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <div class="ac-display">
+                            <span class="temp">21°</span>
+                        </div>
+                    </div>
+                    <div class="ac-airflow">
+                        <div class="airflow-wave"></div>
+                        <div class="airflow-wave"></div>
+                        <div class="airflow-wave"></div>
+                    </div>
+                </div>
+                <div class="ac-glow"></div>
+            </div>
+        </div>
+        
+        <a href="#services" class="scroll-indicator">
+            <span>Przewiń w dół</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Nasze usługi</span>
+                <h2 class="section-title">Kompleksowe rozwiązania<br><span class="accent">klimatyzacyjne</span></h2>
+                <p class="section-description">Od projektu po serwis - zapewniamy pełne wsparcie na każdym etapie</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-animate="fade-up" data-delay="0">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="6" y="12" width="36" height="24" rx="4"/>
+                            <path d="M14 24h20M14 28h16M14 20h12"/>
+                            <path d="M6 20h-2M6 24h-2M6 28h-2M44 20h2M44 24h2M44 28h2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Montaż klimatyzacji</h3>
+                    <p class="service-description">Profesjonalna instalacja urządzeń klimatyzacyjnych z gwarancją jakości i bezpieczeństwa.</p>
+                    <ul class="service-features">
+                        <li>Klimatyzacja domowa</li>
+                        <li>Systemy biurowe</li>
+                        <li>Rozwiązania przemysłowe</li>
+                    </ul>
+                    <a href="#contact" class="service-link">
+                        <span>Dowiedz się więcej</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="service-card featured" data-animate="fade-up" data-delay="100">
+                    <div class="service-badge">Najpopularniejsza</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="24" cy="24" r="18"/>
+                            <path d="M24 14v10l6 6"/>
+                            <circle cx="24" cy="24" r="3"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Serwis i przeglądy</h3>
+                    <p class="service-description">Regularna konserwacja zapewniająca długą żywotność i efektywność Twojego systemu.</p>
+                    <ul class="service-features">
+                        <li>Czyszczenie filtrów</li>
+                        <li>Uzupełnianie czynnika</li>
+                        <li>Diagnostyka usterek</li>
+                    </ul>
+                    <a href="#contact" class="service-link">
+                        <span>Dowiedz się więcej</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="service-card" data-animate="fade-up" data-delay="200">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M8 36l8-16 8 12 8-20 8 24"/>
+                            <path d="M8 44h32"/>
+                            <circle cx="16" cy="20" r="2"/>
+                            <circle cx="24" cy="32" r="2"/>
+                            <circle cx="32" cy="12" r="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Projektowanie systemów</h3>
+                    <p class="service-description">Indywidualne projekty dostosowane do specyfiki Twojego obiektu i potrzeb.</p>
+                    <ul class="service-features">
+                        <li>Analiza potrzeb</li>
+                        <li>Optymalizacja kosztów</li>
+                        <li>Dokumentacja techniczna</li>
+                    </ul>
+                    <a href="#contact" class="service-link">
+                        <span>Dowiedz się więcej</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="service-card" data-animate="fade-up" data-delay="300">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M24 4v8M24 36v8M4 24h8M36 24h8"/>
+                            <path d="M10 10l6 6M32 32l6 6M10 38l6-6M32 16l6-6"/>
+                            <circle cx="24" cy="24" r="8"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Pompy ciepła</h3>
+                    <p class="service-description">Ekologiczne ogrzewanie i chłodzenie - oszczędność energii przez cały rok.</p>
+                    <ul class="service-features">
+                        <li>Pompy powietrze-woda</li>
+                        <li>Pompy gruntowe</li>
+                        <li>Systemy hybrydowe</li>
+                    </ul>
+                    <a href="#contact" class="service-link">
+                        <span>Dowiedz się więcej</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-bg">
+            <div class="about-shape shape-1"></div>
+            <div class="about-shape shape-2"></div>
+        </div>
+        
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content" data-animate="fade-right">
+                    <span class="section-tag">O nas</span>
+                    <h2 class="section-title">15 lat tworzymy<br><span class="accent">idealny klimat</span></h2>
+                    <p class="about-text">
+                        Jesteśmy zespołem pasjonatów, którzy wierzą, że odpowiednia temperatura to podstawa komfortu życia. 
+                        Od 2009 roku dostarczamy rozwiązania klimatyzacyjne najwyższej jakości dla klientów indywidualnych i biznesowych.
+                    </p>
+                    <p class="about-text">
+                        Nasz sukces opiera się na trzech filarach: profesjonalizmie, innowacyjności i niezawodności. 
+                        Każdy projekt traktujemy indywidualnie, dbając o najdrobniejsze szczegóły.
+                    </p>
+                    
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                                    <path d="M9 12l2 2 4-4"/>
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Certyfikowani specjaliści</h4>
+                                <p>Zespół z uprawnieniami F-gazowymi</p>
+                            </div>
+                        </div>
+                        
+                        <div class="about-feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Gwarancja jakości</h4>
+                                <p>5 lat gwarancji na montaż</p>
+                            </div>
+                        </div>
+                        
+                        <div class="about-feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Szybka realizacja</h4>
+                                <p>Montaż w ciągu 24-48h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual" data-animate="fade-left">
+                    <div class="visual-card main-card">
+                        <div class="card-image">
+                            <div class="image-placeholder">
+                                <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1">
+                                    <rect x="20" y="30" width="60" height="40" rx="4"/>
+                                    <path d="M30 50h40M30 55h35M30 45h25"/>
+                                    <circle cx="50" cy="15" r="10"/>
+                                    <path d="M45 15h10M50 10v10"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-tag">Nasz zespół</span>
+                            <p>25+ wykwalifikowanych techników</p>
+                        </div>
+                    </div>
+                    
+                    <div class="visual-card floating-card">
+                        <div class="floating-stat">
+                            <span class="big-number">98%</span>
+                            <span class="stat-text">Klientów poleca nasze usługi</span>
+                        </div>
+                    </div>
+                    
+                    <div class="visual-decoration">
+                        <div class="deco-circle"></div>
+                        <div class="deco-dots">
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Jak działamy</span>
+                <h2 class="section-title">Prosty proces,<br><span class="accent">doskonałe efekty</span></h2>
+                <p class="section-description">Od pierwszego kontaktu do działającego systemu - wszystko przebiega sprawnie i przejrzyście</p>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="timeline-line">
+                    <div class="timeline-progress" id="timelineProgress"></div>
+                </div>
+                
+                <div class="process-step" data-animate="fade-up" data-delay="0">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <h3>Bezpłatna konsultacja</h3>
+                        <p>Zadzwoń lub napisz - omówimy Twoje potrzeby i umówimy wizytę technika.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-animate="fade-up" data-delay="100">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/>
+                            </svg>
+                        </div>
+                        <h3>Projekt i wycena</h3>
+                        <p>Przygotowujemy szczegółowy projekt z transparentną wyceną - bez ukrytych kosztów.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-animate="fade-up" data-delay="200">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                            </svg>
+                        </div>
+                        <h3>Profesjonalny montaż</h3>
+                        <p>Nasi certyfikowani technicy instalują system szybko i czysto.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-animate="fade-up" data-delay="300">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <h3>Gwarancja i serwis</h3>
+                        <p>Zapewniamy pełną gwarancję i oferujemy regularne przeglądy konserwacyjne.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Opinie klientów</span>
+                <h2 class="section-title">Co mówią o nas<br><span class="accent">nasi klienci</span></h2>
+            </div>
+            
+            <div class="testimonials-slider" id="testimonialsSlider">
+                <div class="testimonials-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            "Absolutnie profesjonalna obsługa od A do Z. Klimatyzacja działa cicho i wydajnie. Polecam każdemu!"
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MK</div>
+                            <div class="author-info">
+                                <strong>Marek Kowalski</strong>
+                                <span>Właściciel domu, Warszawa</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            "Zamontowali klimatyzację w całym biurze w weekend. Zero zakłóceń dla pracy zespołu. Rewelacyjne podejście!"
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AN</div>
+                            <div class="author-info">
+                                <strong>Anna Nowak</strong>
+                                <span>CEO, StartupHub</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            "Trzeci rok z rzędu korzystamy z serwisu. Zawsze terminowo, zawsze profesjonalnie. Najlepsza firma w regionie!"
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">PW</div>
+                            <div class="author-info">
+                                <strong>Piotr Wiśniewski</strong>
+                                <span>Manager, Hotel Prestige</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn prev" id="prevBtn" aria-label="Poprzednia opinia">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 12H5M12 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                    <div class="slider-dots" id="sliderDots"></div>
+                    <button class="slider-btn next" id="nextBtn" aria-label="Następna opinia">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-bg">
+            <div class="cta-gradient"></div>
+            <div class="cta-particles" id="ctaParticles"></div>
+        </div>
+        
+        <div class="container">
+            <div class="cta-content" data-animate="fade-up">
+                <h2 class="cta-title">Gotowy na idealny klimat?</h2>
+                <p class="cta-description">Skontaktuj się z nami już dziś i otrzymaj bezpłatną wycenę. Twój komfort jest naszą misją.</p>
+                <div class="cta-actions">
+                    <a href="tel:+48123456789" class="btn btn-light">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <span>+48 123 456 789</span>
+                    </a>
+                    <a href="#contact" class="btn btn-outline-light">
+                        <span>Formularz kontaktowy</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info" data-animate="fade-right">
+                    <span class="section-tag">Kontakt</span>
+                    <h2 class="section-title">Porozmawiajmy o<br><span class="accent">Twoim projekcie</span></h2>
+                    <p class="contact-description">
+                        Masz pytania? Chcesz otrzymać wycenę? Skontaktuj się z nami - odpowiadamy w ciągu 24 godzin.
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <a href="tel:+48123456789" class="contact-method">
+                            <div class="method-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                            <div class="method-content">
+                                <strong>Telefon</strong>
+                                <span>+48 123 456 789</span>
+                            </div>
+                        </a>
+                        
+                        <a href="mailto:kontakt@arcticflow.pl" class="contact-method">
+                            <div class="method-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div class="method-content">
+                                <strong>Email</strong>
+                                <span>kontakt@arcticflow.pl</span>
+                            </div>
+                        </a>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="method-content">
+                                <strong>Adres</strong>
+                                <span>ul. Klimatyczna 15, 00-001 Warszawa</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-hours">
+                        <h4>Godziny pracy</h4>
+                        <p>Poniedziałek - Piątek: 8:00 - 18:00</p>
+                        <p>Sobota: 9:00 - 14:00</p>
+                        <p class="emergency">Serwis awaryjny: 24/7</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper" data-animate="fade-left">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-header">
+                            <h3>Wyślij zapytanie</h3>
+                            <p>Wypełnij formularz, a odezwiemy się najszybciej jak to możliwe</p>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Imię i nazwisko</label>
+                                <input type="text" id="name" name="name" required placeholder="Jan Kowalski">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="+48 123 456 789">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="jan@example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Rodzaj usługi</label>
+                            <select id="service" name="service" required>
+                                <option value="">Wybierz usługę...</option>
+                                <option value="montaz">Montaż klimatyzacji</option>
+                                <option value="serwis">Serwis i przeglądy</option>
+                                <option value="projekt">Projektowanie systemów</option>
+                                <option value="pompa">Pompy ciepła</option>
+                                <option value="inne">Inne</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Wiadomość</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Opisz swoje potrzeby..."></textarea>
+                        </div>
+                        
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent">Wyrażam zgodę na przetwarzanie moich danych osobowych w celu kontaktu</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Wyślij zapytanie</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <svg viewBox="0 0 40 40" class="logo-icon">
+                            <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            <path d="M20 8 L20 32 M8 20 L32 20 M12 12 L28 28 M28 12 L12 28" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            <circle cx="20" cy="20" r="4" fill="currentColor"/>
+                        </svg>
+                        <span>ArcticFlow</span>
+                    </a>
+                    <p class="footer-tagline">Tworzymy idealne warunki do życia i pracy od 2009 roku.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Usługi</h4>
+                    <ul>
+                        <li><a href="#services">Montaż klimatyzacji</a></li>
+                        <li><a href="#services">Serwis i przeglądy</a></li>
+                        <li><a href="#services">Projektowanie systemów</a></li>
+                        <li><a href="#services">Pompy ciepła</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Firma</h4>
+                    <ul>
+                        <li><a href="#about">O nas</a></li>
+                        <li><a href="#process">Jak działamy</a></li>
+                        <li><a href="#testimonials">Opinie</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Kontakt</h4>
+                    <p>ul. Klimatyczna 15<br>00-001 Warszawa</p>
+                    <p><a href="tel:+48123456789">+48 123 456 789</a></p>
+                    <p><a href="mailto:kontakt@arcticflow.pl">kontakt@arcticflow.pl</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 ArcticFlow. Wszystkie prawa zastrzeżone.<br>Made By ErikCoding</p>
+                <div class="footer-legal">
+                    <a href="#">Polityka prywatności</a>
+                    <a href="#">Regulamin</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+            </div>
+            <h3>Wiadomość wysłana!</h3>
+            <p>Dziękujemy za kontakt. Odpowiemy najszybciej jak to możliwe.</p>
+            <button class="btn btn-primary" id="closeModal">Zamknij</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
